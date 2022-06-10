@@ -1,0 +1,452 @@
+<?xml version="1.0"?>
+
+<!--schema declaration-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" >
+    <xs:element name="august_gift_store">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="store_header"/>
+                <xs:element ref="store_details"/>
+                <xs:element ref="brand_collaboration"/>
+                <xs:element ref="brands"/>
+                <xs:element ref="gift_cards"/>
+                <xs:element ref="page_footer"/>
+                <xs:element ref="footer_info"/>
+            </xs:sequence>
+        </xs:complexType>    
+    </xs:element>
+
+    <!--child element of august_gift_store-->
+    <xs:element name="store_header">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="store_logo"/>
+                <xs:element ref="nav_bar"/>
+                <xs:element ref="sign_in"/>
+                <xs:element ref="search_bar"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--child element of store_header-->
+    <xs:element name="store_logo">
+        <xs:complexType>
+            <xs:attribute ref="id" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:attribute name="id" type="xs:ID"/> 
+    <!--child element of store_header-->
+    <xs:element name="nav_bar">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nav_element" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element ref="shopping_cart"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--child element of nav_bar-->
+    <xs:element name="nav_element" type="xs:string"/>
+    <!--child element of nav_bar-->
+    <xs:element name="shopping_cart">
+        <xs:complexType>
+            <xs:attribute ref="id" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!--child element of store_header-->
+    <xs:element name="sign_in" type="xs:string"/>
+    <!--child element of store_header-->
+    <xs:element name="search_bar">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="search_text"/>
+                <xs:element ref="search_icon"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--child element of search_bar-->
+    <xs:element name="search_icon">
+        <xs:complexType>
+            <xs:attribute ref="id" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <!--child element of search_bar-->
+    <xs:element name="search_text" type="xs:string"/>
+
+
+    <!--child element of august_gift_store-->
+    <xs:element name="store_details">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="store_description"/>
+                <xs:element ref="store_intro"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+     
+    <!--child element of store_details-->
+    <xs:element name="store_description">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="description_header"/>
+                <xs:element ref="description_label"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!--child element of store_description-->
+    <xs:element name="description_header" type="xs:string"/>
+    <!--child element of store_description-->
+    <xs:element name="description_label">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:minLength value="35"/>
+                <xs:maxLength value="150"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!--child element of store_details-->
+    <xs:element name="store_intro">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="store_name"/>
+                <xs:element ref="store_address"/>
+                <xs:element ref="store_telephone_number"/>
+                <xs:element ref="store_website"/>
+                <xs:element ref="store_email"/>
+            </xs:sequence>
+            <xs:attribute ref="intro" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:attribute name="intro" type="xs:string" fixed="about"/>
+    <!--child element of store_intro-->
+    <xs:element name="store_name" type="xs:string"/>
+    <!--child element of store_intro-->
+    <xs:element name="store_address">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="location" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attribute name="location" type="xs:string" default="London"/>
+    <!--child element of store_intro-->
+    <xs:element name="store_telephone_number">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <!--child element of store_intro-->
+    <xs:element name="store_website" type="xs:string"/>
+
+
+    <!--child element of august_gift_store-->
+    <xs:element name="brand_collaboration" type="xs:string"/>
+
+    <xs:element name="store_email">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[^@]+@[^\.]+\..+"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+
+    <!--child element of august_gift_store-->
+    <xs:element name="brands">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="brand" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!--child element of brands-->
+    <xs:element name="brand">
+        <xs:complexType>
+            <xs:attribute ref="id" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+
+    <!--child element of august_gift_store-->
+    <xs:element name="gift_cards">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="gift_card" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--child element of gift_cards-->
+    <xs:element name="gift_card">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="card_image"/>
+                <xs:element ref="card_content"/>
+            </xs:sequence>
+            <xs:attribute ref="type" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="card_image">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="card_design"/>
+                <xs:element ref="add_to_cart"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:attribute name="type">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Physical"/>
+                <xs:enumeration value="Digital"/>
+            </xs:restriction> 
+        </xs:simpleType>
+    </xs:attribute>
+
+    <!--child element of gift_image-->
+    <xs:element name="card_design">
+        <xs:complexType>
+            <xs:attribute ref="id" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="add_to_cart">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="cart_display"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="cart_display" type="xs:string"/>
+
+    <!--child element of gift_card-->
+    <xs:element name="card_content">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="card_name"/>
+                <xs:element ref="card_type"/>
+                <xs:element ref="card_cost"/>
+                <xs:element ref="usable_amount"/>
+                <xs:element ref="no_of_users"/>
+                <xs:element ref="card_expiration_date"/>
+                <xs:element ref="extendable_period" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="customizable"/>
+                <xs:element ref="card_delivery" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="international_shipping" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="payment"/>
+                <xs:element ref="refundable"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--child elements of card_content-->
+    <xs:element name="card_name">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="card_id" use="required"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attribute name="card_id" type="xs:IDREF"/>
+    <xs:element name="card_type">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Physical"/>
+                <xs:enumeration value="Digital"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="card_cost" type="xs:positiveInteger"/>
+    <xs:element name="usable_amount" type="xs:positiveInteger"/>
+    <xs:element name="no_of_users" type="xs:positiveInteger" fixed="1"/>
+    
+    <xs:element name="card_expiration_date">
+        <xs:simpleType>
+            <xs:restriction base="xs:date">
+                <xs:minInclusive value="2021-03-01"/>
+                <xs:maxExclusive value="2030-12-31"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="extendable_period">
+        <xs:simpleType>
+            <xs:restriction base="xs:positiveInteger">
+                <xs:minInclusive value="1"/>
+                <xs:maxInclusive value="12"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="customizable">
+        <xs:complexType>
+            <xs:all>
+                <xs:element ref="customizable_header"/>
+                <xs:element ref="customization_charge" minOccurs="0" maxOccurs="1"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="customizable_header">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Yes"/>
+                <xs:enumeration value="No"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="customization_charge" type="xs:string"/>
+
+    <xs:element name="card_delivery">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="delivery_header"/>
+                <xs:element ref="delivery_charge"/>
+                <xs:element ref="delivery_duration"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="delivery_header" type="xs:string"/>
+    <xs:element name="delivery_charge" type="xs:positiveInteger"/>
+
+    <xs:element name="delivery_duration">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:NMTOKEN">
+                    <xs:attribute ref="tok_type" use="required"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>    
+    </xs:element>
+    <xs:attribute name="tok_type" type="xs:NMTOKEN"/>
+
+    <xs:element name="international_shipping">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Available"/>
+                <xs:enumeration value="Not Available"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="payment">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="payment_header"/>
+                <xs:element ref="li" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="payment_header" type="xs:string"/>
+
+    <xs:element name="li">
+        <xs:complexType>
+            <xs:all>
+                <xs:element ref="payment_on_delivery" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="online_payment" minOccurs="0" maxOccurs="1"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="payment_on_delivery">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="availability">
+                    <xs:attribute ref="availability"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="availability">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Available"/>
+            <xs:enumeration value="Not Available"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:attribute name="availability">
+        <xs:simpleType>
+            <xs:restriction base="xs:boolean"/>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:element name="online_payment" type="xs:string" fixed="Available"/>
+
+    <xs:element name="refundable">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Refundable (conditions applied)"/>
+                <xs:enumeration value="Not Refundable"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!--child element of august_gift_store-->
+    <xs:element name="page_footer">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="description"/>
+                <xs:element ref="email"/>
+                <xs:element ref="subscribe"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="description" type="xs:string"/>
+    <xs:element name="email" type="xs:string"/>
+    <xs:element name="subscribe" type="xs:string"/>
+
+    
+    <!--child element of august_gift_store-->
+    <xs:element name="footer_info">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="store"/>
+                <xs:element ref="terms"/>
+                <xs:element ref="privacy"/>
+                <xs:element ref="get_in_touch"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="store" type="xs:string"/>
+    <xs:element name="terms" type="xs:string"/>
+    <xs:element name="privacy" type="xs:string"/>
+    <xs:element name="get_in_touch">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="title"/>
+                <xs:element ref="footer_icons"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="title" type="xs:string"/>
+    <xs:element name="footer_icons">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="icons" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="icons">
+        <xs:complexType>
+            <xs:attribute ref="id" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

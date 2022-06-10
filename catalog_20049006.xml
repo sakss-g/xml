@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<!--linking css-->
+<?xml-stylesheet href="catalog_20049006.css"?>
+
+<!--declaring root element and linking schema-->
+<august_gift_store xsi:noNamespaceSchemaLocation="catalog_20049006.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+    <!--declaring elements for navigation bar of the web page-->
+    <store_header>
+        <store_logo id="L001"/>
+        <nav_bar>
+            <nav_element>Gift</nav_element>
+            <nav_element>Brands</nav_element>
+            <nav_element>Corporate</nav_element>
+            <nav_element>Multi-Store</nav_element>
+            <nav_element>Blog</nav_element>
+            <nav_element>More</nav_element>
+            <shopping_cart id="L002"/>
+        </nav_bar>
+        <sign_in>Sign In</sign_in>
+        <search_bar>
+            <search_text>Search</search_text> 
+            <search_icon id="L003"/>
+        </search_bar>
+    </store_header>
+
+    <!--declaring elements for the details about the store-->
+    <store_details>
+        <store_description>
+            <description_header>Welcome !!</description_header>
+            <description_label> <![CDATA[In celebrations and joys, shower your loved ones with bundle of happiness. Shop here at August's Gifts for some awesome gift cards.]]> </description_label>
+        </store_description>
+        
+        <store_intro intro="about">
+            <store_name>August's Gifts</store_name>
+            <store_address location="London">London, Regent St., W1C 5TD.</store_address>
+            <store_telephone_number>519-661-4965</store_telephone_number>
+            <store_website>www.augustsgifts.com </store_website>
+            <store_email>augustsgifts@gmail.com</store_email>
+        </store_intro>
+    </store_details>
+
+    <!--declaring elements for brands whose gift card is available in the store-->
+    <brand_collaboration>Brands in Collaboration</brand_collaboration>
+    
+    <brands>
+        <brand id="C001"/>
+        <brand id="C002"/>
+        <brand id="C003"/>
+        <brand id="C004"/>
+        <brand id="C005"/>
+        <brand id="C006"/>
+    </brands>
+
+    <!--each card is separated within the element gift_cards by the element gift_card-->
+    <gift_cards>
+        <!--Declaring child elements of the parent element gift_cards-->
+        <gift_card type="Physical">
+            <card_image>
+                <card_design id="CD001"/>
+                <add_to_cart>
+                    <cart_display>Add to Cart</cart_display>
+                </add_to_cart>   
+            </card_image>
+            <card_content>
+                <card_name card_id="C001">H&amp;M Birthday Gift Card</card_name>
+                <card_type>Physical</card_type>
+                <card_cost>105</card_cost>
+                <usable_amount>100</usable_amount>
+                <no_of_users>1</no_of_users>
+                <card_expiration_date>2022-12-12</card_expiration_date>
+                <customizable>
+                    <customizable_header>No</customizable_header>
+                </customizable>
+                <!--optional element for the parent element card_content is card_delivery-->
+                <card_delivery>
+                    <delivery_header/>
+                    <delivery_charge>20</delivery_charge>
+                    <delivery_duration tok_type="00-00">07-10</delivery_duration>
+                </card_delivery>
+                <!--optional element for the parent element card_content is international_shipping-->
+                <international_shipping>Available</international_shipping>
+                <payment>
+                    <payment_header/>
+                    <!--optional element for the parent element payment is payment_on_delivery-->
+                    <li><payment_on_delivery availability="false">Not Available</payment_on_delivery></li>
+                    <li><online_payment>Available</online_payment></li>
+                </payment> 
+                <refundable>Refundable (conditions applied)</refundable>   
+            </card_content>
+        </gift_card>
+
+        <gift_card type="Digital">
+            <card_image>
+                <card_design id="CD002"/>
+                <add_to_cart>
+                    <cart_display>Add to Cart</cart_display>
+                </add_to_cart>   
+            </card_image>
+            <card_content>
+                <card_name card_id="C001">H&amp;M Thank You Gift Card</card_name>
+                <card_type>Digital</card_type>
+                <card_cost>55</card_cost>
+                <usable_amount>50</usable_amount>
+                <no_of_users>1</no_of_users>
+                <card_expiration_date>2024-03-01</card_expiration_date>
+                <extendable_period>4</extendable_period>
+                <customizable>
+                    <!--optional element for the parent element customizable is customization_charge-->
+                    <customizable_header>Yes</customizable_header>
+                    <customization_charge>Negotiable</customization_charge>
+                </customizable>
+                <payment>
+                    <payment_header/>
+                    <li><online_payment>Available</online_payment></li>
+                </payment>
+                <refundable>Not Refundable</refundable>   
+            </card_content>
+        </gift_card>
+
+        <gift_card type="Digital">
+            <card_image>
+                <card_design id="CD003"/>
+                <add_to_cart>
+                    <cart_display>Add to Cart</cart_display>
+                </add_to_cart>   
+            </card_image>
+            <card_content>
+                <card_name card_id="C002">SHEIN - Never go out of style</card_name>
+                <card_type>Digital</card_type>
+                <card_cost>205</card_cost>
+                <usable_amount>200</usable_amount>
+                <no_of_users>1</no_of_users>
+                <card_expiration_date>2022-11-12</card_expiration_date> 
+                <extendable_period>5</extendable_period>
+                <customizable>
+                    <customizable_header>No</customizable_header>
+                </customizable>
+                <payment>
+                    <payment_header/>
+                    <li><online_payment>Available</online_payment></li>
+                </payment> 
+                <refundable>Not Refundable</refundable> 
+            </card_content>  
+        </gift_card>
+
+        <gift_card type="Digital">
+            <card_image>
+                <card_design id="CD004"/>
+                <add_to_cart>
+                    <cart_display>Add to Cart</cart_display>
+                </add_to_cart>   
+            </card_image>
+            <card_content>
+                <card_name card_id="C002">SHEIN - Always in Trend</card_name>
+                <card_type>Digital</card_type>
+                <card_cost>105</card_cost>
+                <usable_amount>100</usable_amount>
+                <no_of_users>1</no_of_users>
+                <card_expiration_date>2023-11-12</card_expiration_date>   
+                <extendable_period>3</extendable_period>
+                <customizable>
+                    <customizable_header>No</customizable_header>
+                </customizable>
+                <payment>
+                    <payment_header/>
+                    <li><online_payment>Available</online_payment></li>
+                </payment> 
+            <refundable>Not Refundable</refundable>   
+            </card_content>
+        </gift_card>
+
+        <gift_card type="Digital">
+            <card_image>
+                <card_design id="CD005"/>
+                <add_to_cart>
+                    <cart_display>Add to Cart</cart_display>
+                </add_to_cart>   
+            </card_image>
+            <card_content>
+                <card_name card_id="C003">amazon - congratulations card</card_name>
+                <card_type>Digital</card_type>
+                <card_cost>55</card_cost>
+                <usable_amount>50</usable_amount>
+                <no_of_users>1</no_of_users>
+                <card_expiration_date>2023-05-06</card_expiration_date>
+                <extendable_period>6</extendable_period>
+                <customizable>
+                    <customizable_header>No</customizable_header>
+                </customizable>
+                <payment>
+                    <payment_header/>
+                    <li><online_payment>Available</online_payment></li>
+                </payment> 
+                <refundable>Not Refundable</refundable>   
+            </card_content>
+        </gift_card>
+
+        <gift_card type="Physical">
+            <card_image>
+                <card_design id="CD006"/>
+                <add_to_cart>
+                    <cart_display>Add to Cart</cart_display>
+                </add_to_cart>   
+            </card_image>
+            <card_content>
+                <card_name card_id="C003">amazon - Mother's Day card</card_name>
+                <card_type>Physical</card_type>
+                <card_cost>55</card_cost>
+                <usable_amount>50</usable_amount>
+                <no_of_users>1</no_of_users>
+                <card_expiration_date>2024-05-24</card_expiration_date>
+                <customizable>
+                    <customizable_header>No</customizable_header>
+                </customizable>
+                <!--optional element for the parent element card_content is card_delivery-->
+                <card_delivery>
+                    <delivery_header/>
+                    <delivery_charge>10</delivery_charge>
+                    <delivery_duration tok_type="00-00">07-10</delivery_duration>
+                </card_delivery>
+                <!--optional element for the parent element card_content is international_shipping-->
+                <international_shipping>Not Available</international_shipping>
+                <payment>
+                    <payment_header/>
+                    <!--optional element for the parent element payment is payment_on_delivery-->
+                    <li><payment_on_delivery availability="true">Available</payment_on_delivery></li>
+                    <li><online_payment>Available</online_payment></li>
+                </payment>  
+                <refundable>Refundable (conditions applied)</refundable>   
+            </card_content>
+        </gift_card>
+
+        <gift_card type="Physical">
+            <card_image>
+                <card_design id="CD007"/>
+                <add_to_cart>
+                    <cart_display>Add to Cart</cart_display>
+                </add_to_cart>   
+            </card_image>
+            <card_content>
+                <card_name card_id="C004">SEPHORA COLLECTION - Lips Gift Card</card_name>
+                <card_type>Physical</card_type>
+                <card_cost>205</card_cost>
+                <usable_amount>200</usable_amount>
+                <no_of_users>1</no_of_users>
+                <card_expiration_date>2022-05-24</card_expiration_date>
+                <customizable>
+                    <customizable_header>No</customizable_header>
+                </customizable>
+                <!--optional element for the parent element card_content is card_delivery-->
+                <card_delivery>
+                    <delivery_header></delivery_header>
+                    <delivery_charge>30</delivery_charge>
+                    <delivery_duration tok_type="00-00">07-10</delivery_duration>
+                </card_delivery>
+                <!--optional element for the parent element card_content is international_shipping-->
+                <international_shipping>Not Available</international_shipping>
+                <payment>
+                    <payment_header/>
+                    <!--optional element for the parent element payment is payment_on_delivery-->
+                    <li><payment_on_delivery availability="true">Available</payment_on_delivery></li>
+                    <li><online_payment>Available</online_payment></li>
+                </payment>  
+                <refundable>Refundable (conditions applied)</refundable>   
+            </card_content>
+        </gift_card>
+
+        <gift_card type="Digital">
+            <card_image>
+                <card_design id="CD008"/>
+                <add_to_cart>
+                    <cart_display>Add to Cart</cart_display>
+                </add_to_cart>   
+            </card_image>
+            <card_content>
+                <card_name card_id="C004">SEPHORA COLLECTION Gift Card</card_name>
+                <card_type>Digital</card_type>
+                <card_cost>205</card_cost>
+                <usable_amount>200</usable_amount>
+                <no_of_users>1</no_of_users>
+                <card_expiration_date>2023-11-24</card_expiration_date>
+                <extendable_period>8</extendable_period>
+                <customizable>
+                    <!--optional element for the parent element customizable is customization_charge-->
+                    <customizable_header>Yes</customizable_header>
+                    <customization_charge>Negotiable</customization_charge>
+                </customizable>
+                <payment>
+                    <payment_header/>
+                    <li><online_payment>Available</online_payment></li>
+                </payment> 
+                <refundable>Not Refundable</refundable> 
+            </card_content>
+        </gift_card>
+
+        <gift_card type="Digital">
+            <card_image>
+                <card_design id="CD009"/>
+                <add_to_cart>
+                    <cart_display>Add to Cart</cart_display>
+                </add_to_cart>   
+            </card_image>
+            <card_content>
+                <card_name card_id="C005">HOLO TACO - Everyone deserves a holo </card_name>
+                <card_type>Digital</card_type>
+                <card_cost>105</card_cost>
+                <usable_amount>100</usable_amount>
+                <no_of_users>1</no_of_users>
+                <card_expiration_date>2025-12-13</card_expiration_date>
+                <extendable_period>10</extendable_period>
+                <customizable>
+                    <customizable_header>No</customizable_header>
+                </customizable>
+                <payment>
+                    <payment_header/>
+                    <li><online_payment>Available</online_payment></li>
+                </payment> 
+                <refundable>Not Refundable</refundable> 
+            </card_content>  
+        </gift_card>
+
+        <gift_card type="Physical">
+            <card_image>
+                <card_design id="CD0010"/>
+                <add_to_cart>
+                    <cart_display>Add to Cart</cart_display>
+                </add_to_cart>   
+            </card_image>
+            <card_content>
+                <card_name card_id="C005">HOLO TACO Gift Card</card_name>
+                <card_type>Physical</card_type>
+                <card_cost>205</card_cost>
+                <usable_amount>200</usable_amount>
+                <no_of_users>1</no_of_users>
+                <card_expiration_date>2022-01-12</card_expiration_date>
+                <customizable>
+                    <customizable_header>No</customizable_header>
+                </customizable>
+                <!--optional element for the parent element card_content is card_delivery-->
+                <card_delivery>
+                    <delivery_header/>
+                    <delivery_charge>30</delivery_charge>
+                    <delivery_duration tok_type="00-00">07-10</delivery_duration>
+                </card_delivery>
+                <!--optional element for the parent element card_content is international_shipping-->
+                <international_shipping>Available</international_shipping>
+                <payment>
+                    <payment_header/>
+                    <!--optional element for the parent element payment is payment_on_delivery-->
+                    <li><payment_on_delivery availability="true">Available</payment_on_delivery></li>
+                    <li><online_payment>Available</online_payment></li>
+                </payment>  
+                <refundable>Refundable (conditions applied)</refundable>   
+            </card_content>
+        </gift_card>
+
+        <gift_card type="Physical">
+            <card_image>
+                <card_design id="CD0011"/>
+                <add_to_cart>
+                    <cart_display>Add to Cart</cart_display>
+                </add_to_cart>   
+            </card_image>
+            <card_content>
+                <card_name card_id="C006">Apple - Everything gift card </card_name>
+                <card_type>Digital</card_type>
+                <card_cost>105</card_cost>
+                <usable_amount>100</usable_amount>
+                <no_of_users>1</no_of_users>
+                <card_expiration_date>2023-04-13</card_expiration_date>
+                <customizable>
+                    <customizable_header>No</customizable_header>
+                </customizable>
+                <payment>
+                    <payment_header/>
+                    <li><online_payment>Available</online_payment></li>
+                </payment> 
+                <refundable>Not Refundable</refundable>     
+            </card_content>
+        </gift_card>
+
+        <gift_card type="Physical">
+            <card_image>
+                <card_design id="CD0012"/>
+                <add_to_cart>
+                    <cart_display>Add to Cart</cart_display>
+                </add_to_cart>   
+            </card_image>
+            <card_content>
+                <card_name card_id="C006">Apple - iTunes gift card</card_name>
+                <card_type>Physical</card_type>
+                <card_cost>55</card_cost>
+                <usable_amount>50</usable_amount>
+                <no_of_users>1</no_of_users>
+                <card_expiration_date>2024-09-13</card_expiration_date>
+                <customizable>
+                    <customizable_header>No</customizable_header>
+                </customizable>
+                <!--optional element for the parent element card_content is card_delivery-->
+                <card_delivery>
+                    <delivery_header/>
+                    <delivery_charge>15</delivery_charge>
+                    <delivery_duration tok_type="00-00">07-10</delivery_duration>
+                </card_delivery>
+                <!--optional element for the parent element card_content is international_shipping-->
+                <international_shipping>Available</international_shipping>
+                <payment>
+                    <payment_header/>
+                    <!--optional element for the parent element payment is payment_on_delivery-->
+                    <li><payment_on_delivery availability="true">Available</payment_on_delivery></li>
+                    <li><online_payment>Available</online_payment></li>
+                </payment>  
+            <refundable>Refundable (conditions applied)</refundable>  
+            </card_content> 
+        </gift_card>
+    </gift_cards>
+
+    <!--declaring elements for footer of the web page-->
+    <page_footer>
+        <description>To get notified with our amazing cards, offers and discounts, subscribe today.</description>
+        <email>Enter your email address</email>
+        <subscribe>Subscribe</subscribe>
+    </page_footer>
+
+    <footer_info>
+        <store>August's Gifts</store>
+        <terms>Terms of Services</terms>
+        <privacy>Privacy Policy</privacy>
+        <get_in_touch>
+            <title>Get in touch</title>
+            <footer_icons>
+                <icons id="L004"/>
+                <icons id="L005"/>
+                <icons id="L006"/>
+            </footer_icons>
+        </get_in_touch>
+    </footer_info>
+
+</august_gift_store>

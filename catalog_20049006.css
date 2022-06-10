@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+}
+
+august_gift_store{
+    background-color: #EFDCF9;
+}
+
+store_header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #341948;
+}
+
+store_logo{
+    background-image: url(logo1.png);
+    width: 110px;
+    height: 110px;
+    background-size: contain;
+    position: relative;
+    background-repeat: no-repeat;
+    display: block;
+    margin: 10px 0;
+    border-radius: 50%;
+}
+
+nav_bar {
+    display: flex;
+}
+
+nav_element {
+    margin: 5px 20px;
+    color: #EFDCF9;
+}
+
+shopping_cart {
+    margin-left: 10px;
+    background: url(cart_icon.png);
+    height: 32px;
+    width: 32px;
+}
+
+sign_in{
+    color: #EFDCF9;
+}
+
+sign_in:hover{
+    color: #da70d6;
+    text-decoration: underline #da70d6 dashed;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+search_bar {
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    display: flex;
+    background: #fffafa;
+    border-radius: 10px;
+    color: #341948;
+    width: 200px;
+}
+
+search_text {
+    padding: 10px 0;
+}
+
+search_icon {
+    background: url(search_icon.png);
+    height: 32px;
+    width: 32px;
+    margin-left: 75px;
+}
+
+nav_bar nav_element:hover {
+    color: #da70d6;
+    text-decoration: underline #da70d6 dashed;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+store_details {
+    display: flex;
+}
+
+store_description{
+    float:left;
+    display: block;
+    width: 65%;
+    height: 180px;
+    margin-left: 75px;
+    padding: 20px;
+}
+
+description_header {
+    margin: 10px 0;
+    font-family: 'Acme', sans-serif;
+    font-size: 45px;
+}
+
+description_label {
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+store_intro{
+    display: block;
+    margin-left: auto;
+    width: 30%;
+    height: 180px;
+    padding: 20px;
+}
+
+store_name{
+    font-family: 'Parisienne', cursive;
+    font-size: 50px;
+    margin-left: 90px;
+    color: rgb(52,25,72);
+}
+
+store_address {
+    margin-left: 150px;
+    margin-right: 0;
+}
+
+store_telephone_number{
+    margin-left: 260px;
+    margin-right: 0;
+}
+
+store_website{
+    margin-left: 195px;
+    margin-right: 0;
+}
+
+store_email{
+    margin-left: 180px;
+    margin-right: 0;
+}
+
+brand_collaboration{
+    display: flex;
+    height: 50px;
+    font-family: 'Acme', sans-serif;
+    font-size: 35px;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+brands{
+    display:flex;
+    border: 2px solid #341948;
+    justify-content: space-around;
+    align-items: center;
+    height: 170px;
+    margin: 3rem;
+}
+
+brand{
+    background-size: contain;
+    position: relative;
+    background-repeat: no-repeat;
+    height: 120px;
+    width: 190px;
+    transition: transform .2s;
+}
+
+brand:hover{
+    transform: scale(1.5);
+}
+
+#C001{
+    background: url(L001.jpg);
+}
+
+#C002{
+    background: url(L002.jpg);
+}
+
+#C003{
+    background: url(L003.jpg);
+}
+
+#C004{
+    background: url(L004.jpg);
+}
+
+#C005{
+    background: url(L005.jpg);
+}
+
+#C006{
+    background: url(L006.jpg);
+}
+
+gift_cards{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+}
+
+gift_card{
+    border: 2px solid #341948;
+    display: block;
+    padding: 1.5rem;
+    flex: 1 0 30%;
+    margin: 1rem;
+
+}
+
+card_design{
+    width: 375px;
+    height:235px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    border: 2px #BD97CB solid;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    transition:0.5s ease;
+    backface-visibility: hidden;
+    opacity:1;
+}
+
+add_to_cart{
+    transition:0.5s ease;
+    opacity:0;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    text-align: center;
+    cursor: pointer;
+    display: block;
+}
+
+card_image{
+    display:block;
+    position: relative;
+}
+
+card_image:hover card_design{
+    opacity:0.3;
+}
+
+card_image:hover add_to_cart{
+    opacity:1;
+}
+
+cart_display{
+    background-color: #341948;
+    color: #BD97CB;
+    font-size: 20px;
+    padding: 10px 25px;
+}
+
+#CD001{
+    background: url(CD001.png);
+}
+
+#CD002{
+    background: url(CD002.png);
+}
+
+#CD003{
+    background: url(CD003.png);
+}
+
+#CD004{
+    background: url(CD004.png);
+}
+
+#CD005{
+    background: url(CD005.png);
+}
+
+#CD006{
+    background: url(CD006.png);
+}
+
+#CD007{
+    background: url(CD007.png);
+}
+
+#CD008{
+    background: url(CD008.png);
+}
+
+#CD009{
+    background: url(CD009.png);
+}
+
+#CD0010{
+    background: url(CD0010.png);
+}
+
+#CD0011{
+    background: url(CD0011.png);
+}
+
+#CD0012{
+    background: url(CD0012.png);
+}
+
+card_content{
+    padding-left: 10px;  
+}
+
+card_content delivery_details delivery_charge{
+    padding-left: 20px;
+}
+
+customization_charge{
+    display:list-item;
+    list-style: circle;
+    margin-left: 35px;
+}
+
+delivery_charge, delivery_duration{
+    display:list-item;
+    list-style: circle;
+    margin-left: 35px;
+}
+
+payment_on_delivery, online_payment{
+    display:list-item;
+    list-style: circle;
+    margin-left: 35px;
+}
+
+page_footer {
+    background-color: #BD97CB;
+    width: 100%;
+    margin-top: 2rem;
+    padding:20px;
+}
+
+page_footer email {
+    display: flex;
+    justify-content: center;
+    background: white;
+    margin: 20px 0;
+    border-radius: 10px;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    width: 25%;
+    margin-left: 560px;
+    margin-right: 0;
+}
+
+page_footer description{
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+}
+
+page_footer subscribe {
+    background: #341948;
+    width: 7%;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10px;
+    color: #EFDCF9;
+    cursor: pointer;
+    text-align: center;
+}
+
+page_footer subscribe:hover {
+    background: #613659;
+}
+
+footer_info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #341948;
+    color: #BD97CB;
+    width: 100%;
+    height: 120px;
+}
+
+footer_info store{
+    font-family: 'Parisienne', cursive;
+    font-size: 50px;
+    margin-left: 90px;
+    margin: 10px 0;
+}
+
+footer_info terms{
+    font-size: 18px;
+}
+
+footer_info privacy{
+    font-size: 18px;
+}
+
+footer_info get_in_touch{
+    font-size: 18px;
+}
+
+footer_info terms:hover{
+    color: #da70d6;
+    text-decoration: underline #da70d6 dashed;   
+    transition: 0.5s ease-in-out; 
+    cursor: pointer;
+}
+
+footer_info privacy:hover{
+    color: #da70d6;
+    text-decoration: underline #da70d6 dashed;
+    transition: 0.5s ease-in-out;   
+    cursor: pointer; 
+}
+
+footer_icons{
+    height:32px;
+    width:32px;    
+}
+
+get_in_touch {
+    display: block;
+}
+
+title{
+    padding-left: 40px;
+}
+
+footer_icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    width: 170px;
+}
+
+icons{
+    height: 32px;
+    width: 32px;
+
+}
+
+#L004{
+    background: url(facebook_icon.png);
+}
+
+#L005{
+    background: url(instagram_icon.png);
+}
+
+#L006{
+    background: url(pinterest_icon.png);
+}
+
+card_name::before{
+    content: 'Card: ';
+    font-weight: bold;
+}
+
+card_type::before{
+    content: 'Type: ';
+    font-weight: bold;
+}
+
+card_cost::before{
+    content: 'Cost: $';
+    font-weight: bold;
+}
+
+usable_amount::before{
+    content: 'Usable Amount: $';
+    font-weight: bold;
+}
+
+no_of_users::before{
+    content: 'Number of Users: ';
+    font-weight: bold;
+}
+
+card_expiration_date::before{
+    content: 'Expiration Date: ';
+    font-weight: bold;
+}
+
+extendable_period::before{
+    content: 'Extendable Period: ';
+    font-weight: bold;
+}
+
+extendable_period::after{
+    content: ' months';
+}
+
+customizable_header::before{
+    content: 'Customizable: ';
+    font-weight: bold;
+}
+
+customization_charge::before{
+    content: 'Customization Charge: ';
+}
+
+delivery_header::before{
+    content: 'Delivery Details: ';
+    font-weight: bold;
+}
+
+delivery_charge::before{
+    content: 'Delivery Charge: $';
+}
+
+delivery_duration::before{
+    content: 'Delivery Duration: ';
+}
+
+delivery_duration::after{
+    content: ' days' ;
+}
+
+international_shipping::before{
+    content: 'International Shipping: ';
+    font-weight: bold;
+}
+
+payment_header::before{
+    content: 'Payment Methods: ';
+    font-weight: bold;
+}
+
+payment_on_delivery::before{
+    content: 'Payment On Delivery: ';
+}
+
+online_payment::before{
+    content: 'Online Payment: ';
+}
+
+refundable::before{
+    content: 'Refundable: ';
+    font-weight: bold;
+}
